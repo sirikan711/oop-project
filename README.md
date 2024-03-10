@@ -11,5 +11,5 @@
 ![Alt text](findblaze_wa_choose1.png)
 
 ![Alt text](findblaze_wa_ex1.png)
-## presentation : [slide/canva/etc.] link [public/ubu]
+## presentation : ![FIND Blaze.wa](https://www.canva.com/design/DAF_FWPbbJ4/iqZ-avKm5IlTgelF9_jRJw/view?utm_content=DAF_FWPbbJ4&utm_campaign=designshare&utm_medium=link&utm_source=editor)
 ## video : link [public/ubu]
