@@ -1,11 +1,11 @@
 import streamlit as st
 
-st.title('MY PIPO PIPO')
+st.title('FIND Blaze.wa')
 st.caption('List to Read')
 
 st.markdown('## Manhwa')
 choices = st.multiselect(
-    'เลือกประเภทของ Manhwa ที่คุณสนใจ', ['Romance', 'Action', 'Fantasy', 'Horror', 'Drama', 'Comedy', 'Reincarnation', 'Time Travel', 'Adventure', 'Survival', 'Idol'])
+    'เลือกประเภทของ Manhwa ที่คุณสนใจ (เลือกได้หลายตัวเลือก)', ['Romance', 'Action', 'Fantasy', 'Horror', 'Thriller', 'Drama', 'Comedy', 'Reincarnation', 'Time Travel', 'Adventure', 'Survival', 'Idol'])
 
 # Romance Fantasy
 if ('Romance' in choices or 'Fantasy' in choices) and all(choice in ['Romance', 'Fantasy'] for choice in choices):
@@ -76,6 +76,13 @@ if ('Romance' in choices or 'Fantasy' in choices or 'Drama' in choices) and all(
          'แต่ที่จริงแล้วเธอมี 2 หน้า เพราะเธอตั้งใจจะแย่งบัลลังก์ และทวงทุกอย่างคืนจากพ่อเธอ',
          'web':'KaKao Webtoon', 'link': 'https://th.kakaowebtoon.com/content/องค์หญิงสองหน้า/315?tab=episode'},
 
+        {'image': 'manhwa_png/rm_dm_fs02.jpg',
+         'caption': 'นางร้ายต้องสังหาร',
+         'markdown': 'ชื่ออังกฤษ : Kill the Villainess\n\n'
+         '**เอริส มิเซเลียน นางร้ายในนิยายที่มีชะตรรมต้องถูกประหารชีวิต** เพราะริษยาเฮเลน่า นางเอกของเรื่องจึงวางแผนทำร้ายเธอจนมกุฏราชกุมารต้องออกมาปกป้อง\n\n'
+         'ฉันที่เข้ามาสวมร่างของเอริส ได้เตรียมใจตายไว้แล้ว เพราะอยากจะหนีกลับโลกเดิมเต็มที',
+         'web':'KaKao Webtoon', 'link': 'https://th.kakaowebtoon.com/content/นางร้ายต้องสังหาร/229?tab=episode'},
+
     ]
     for item in rm_dm_fs:
         st.image(item['image'], caption=item['caption'], width=200)
@@ -90,7 +97,21 @@ if ('Romance' in choices or 'Fantasy' in choices or 'Drama' in choices or 'Time 
          'markdown':'ชื่ออังกฤษ : Solitary Lady\n\n'
          '**ฮิลลิส ที่ตายมาแล้วถึง 7 ครั้ง** ในวินาทีสุดท้ายพี่ชายยังขอให้ตายแทนน้องสาวที่ไม่ได้มีสายเลือดเดียวกันอีกต่างหาก\n\n'
          '**“ในชีวิตครั้งที่ 8 นี้ฉันจะไม่ปิดบังพลังอีกแล้ว คนพวกนั้นจะเป็นยังไงก็ช่าง”** เรื่องราวฮิลลิสที่กลับมาใช้ชีวิตใหม่อีกครั้ง',
-         'web':'KaKao Webtoon', 'link': 'https://th.kakaowebtoon.com/content/เลดี้ผู้ห้ามแตะต้อง/202?tab=episode'}
+         'web':'KaKao Webtoon', 'link': 'https://th.kakaowebtoon.com/content/เลดี้ผู้ห้ามแตะต้อง/202?tab=episode'},
+
+        {'image': 'manhwa_png/rm_dm_fs_tt01.jpg',
+         'caption': 'ใต้เงาแค้นจักรพรรดินี',
+         'markdown':'ชื่ออังกฤษ : Queen in the Shadows\n\n'
+         '**เอเลนา ได้รับข้อเสนอให้สวมบทเป็นบุตรสาวของแกรนด์ดยุกฟรานซ์** เนื่องจากมีหน้าตาคล้ายคลึงกันอย่างมาก แต่หลังจากนั้น เธอกลับโดนคนจากตระกูลแกรนด์ดยุกหักหลัง และฆ่าตาย\n\n'
+         'เมื่อลืมตาตื่นขึ้น เธอพบว่าตัวเองได้**ย้อนเวลากลับมายังอดีต**ก่อนที่เรื่องราวทั้งหมดจะเกิดขึ้น **“ฉันจะแก้แค้นทุกคนที่เคยทำกับฉันไว้!”**',
+         'web':'KaKao Webtoon', 'link': 'https://th.kakaowebtoon.com/content/ใต้เงาแค้นจักรพรรดินี/347?tab=episode'},
+
+        {'image': 'manhwa_png/rm_dm_fs_tt02.jpg',
+         'caption': 'ฉันลวงทรราชให้ภักดีแล้วหนีจาก',
+         'markdown':'ชื่ออังกฤษ : The Taming of the Tyrant\n\n'
+         '**ชาร์ลิซ โรนัน เด็กสาวผู้มีทักษะการฟันดาบโดดเด่น** จนจักรพรรดิต้องการทำให้เธอกลายร่างเป็นดาบ เพื่อสร้างความรุ่งโรจน์ให้จักรวรรดิ จนความทุกข์ความเจ็บปวดทั้งหมดของชาร์ลิสแปรเปลี่ยนเป็นความแค้น\n\n'
+         '**เธอได้ย้อนเวลากลับมาก่อนจะกลายเป็นดาบ** จึงชิงวางแผนที่จะทำให้จักรวรรดิพังพินาศ โดยตั้งใจจะ**หลอกใช้ดีแลน องค์ชายผู้นิ่งสงบ ให้กลายเป็นทรราช**เพื่อนำจักรวรรดิไปสู่หายนะ',
+         'web':'KaKao Webtoon', 'link': 'https://th.kakaowebtoon.com/content/ฉันลวงทรราชให้ภักดีแล้วหนีจาก/173?tab=episode'}
 
     ]
     for item in rm_dm_fs_tt:
@@ -117,13 +138,6 @@ if ('Romance' in choices or 'Comedy' in choices) and all(choice in ['Romance', '
 if ('Romance' in choices or 'Comedy' in choices or 'Fantasy' in choices) and all(choice in ['Romance', 'Comedy', 'Fantasy'] for choice in choices):
     rm_cmd_fs = [
         {'image': 'manhwa_png/rm_cmd_fs00.jpg',
-         'caption': 'เอลิเซ่ แพทย์หญิงทะลุมิติ',
-         'markdown': 'ชื่ออังกฤษ : Doctor Elise : The Royal Lady with the Lamp\n\n'
-         '**ซงจีฮยอน ศัลยแพทย์มือฉมัง** ตั้งใจทุ่มเทชีวิตนี้ช่วยเหลือผู้คนเพื่อชดใช้ความผิดในอดีตชาติ แต่จู่ๆ เครื่องบินที่เธอนั่งเกิดเหตุระเบิด และเมื่อ**ฟื้นขึ้นมาก็พบว่าตัวเองอยู่ในร่างของเอลิเซ่ ตัวเธอในอดีตชาติ**\n\n'
-         'การกลับมาของเธอจะสามารถเปลี่ยนแปลงอดีตที่เคยผิดพลาดไปได้หรือไม่',
-         'web':'Comico', 'link': 'https://www.comico.in.th/titles/1319'},
-
-        {'image': 'manhwa_png/rm_cmd_fs01.jpg',
          'caption': 'เจ้าหญิงผมดำกับเจ้าชายผมแดง',
          'markdown': 'ชื่ออังกฤษ : A Royal Princess with Black Hair\n\n'
          '**เจ้าหญิงยูรีเซียน และเจ้าชายคารูเอล ที่ต้องมาเป็นคู่หมั้นกันเพื่อแต่งงานทางการเมือง** แต่เนื่องจากทั้งคู่ไม่ได้มีความรักให้กันจึงตั้งใจจะหย่า\n\n'
@@ -136,39 +150,77 @@ if ('Romance' in choices or 'Comedy' in choices or 'Fantasy' in choices) and all
         st.markdown(item['markdown'])
         st.link_button(item['web'],item['link'])
 
+# Romance Comedy Fantasy Time Travel
+if ('Romance' in choices or 'Comedy' in choices or 'Fantasy' in choices or 'Time Travel' in choices) and all(choice in ['Romance', 'Comedy', 'Fantasy', 'Time Travel'] for choice in choices):
+    rm_cmd_fs_tt = [
+        {'image': 'manhwa_png/rm_cmd_fs_tt00.jpg',
+         'caption': 'เอลิเซ่ แพทย์หญิงทะลุมิติ',
+         'markdown': 'ชื่ออังกฤษ : Doctor Elise : The Royal Lady with the Lamp\n\n'
+         '**ซงจีฮยอน ศัลยแพทย์มือฉมัง** ตั้งใจทุ่มเทชีวิตนี้ช่วยเหลือผู้คนเพื่อชดใช้ความผิดในอดีตชาติ แต่จู่ๆ เครื่องบินที่เธอนั่งเกิดเหตุระเบิด และเมื่อ**ฟื้นขึ้นมาก็พบว่าตัวเองอยู่ในร่างของเอลิเซ่ ตัวเธอในอดีตชาติ**\n\n'
+         'การกลับมาของเธอจะสามารถเปลี่ยนแปลงอดีตที่เคยผิดพลาดไปได้หรือไม่',
+         'web':'Comico', 'link': 'https://www.comico.in.th/titles/1319'},
+    ]
+    for item in rm_cmd_fs_tt:
+        st.image(item['image'], caption=item['caption'], width=200)
+        st.markdown(item['markdown'])
+        st.link_button(item['web'],item['link'])
 
 # Action
 if 'Action' in choices and all(choice in ['Action'] for choice in choices):
-    ac = [
+    ac = [        
         {'image': 'manhwa_png/ac00.jpg',
-         'caption': 'ปีศาจกลับมาเรียน',
-         'markdown': 'ชื่ออังกฤษ : Devil Returns to School Days\n\n'
-         '**คิมฮยอนซอง นักเรียนดีเด่นที่ถูกพวกนักเลงในโรงเรียนพลักตกจากดาดฟ้าก่อนวันเรียนจบ** อาการของเขาอยู่ในขั้นโคม่า ไม่ตอบสนองใดๆ ยาวนานถึง 10 ปี\n\n'
-         'อยู่มาวันหนึ่งเขาได้ย้อนเวลากลับไปในช่วงก่อนจะเกิดทุกอย่างขึ้น **“ฉันจะแก้แค้นพวกที่เคยกลั่นแกล้ง และพวกที่เมินเฉยให้หมด!”**',
-         'web':'Webtoon', 'link': 'https://www.webtoons.com/th/action/devil-goes-to-school/list?title_no=5456'},
-        
-        {'image': 'manhwa_png/ac01.jpg',
-         'caption': 'หมาหัวเน่าเก๋าเกินไป',
-         'markdown': 'ชื่ออังกฤษ : The Strongest Outcast\n\n'
-         '**ชามูกยอล นักมวยฝีมือดีที่ถูกประธานหักหลัง จนเขากลายเป็นอัมพาต** แต่แล้ววิญญาณของชามูกยอลก็ได้เข้าไปสิงร่างของนักเรียนคนหนึ่งที่โดนบูลลี่\n\n'
-         '**เขาจะกลับมาทำตามความฝัน และเอาคืนคนที่ทำให้เขาทุกข์ทรมาน**',
-         'web':'Webtoon', 'link': 'https://www.webtoons.com/th/action/the-strongest-outcast/list?title_no=5324'},
-
-        {'image': 'manhwa_png/ac02.jpg',
          'caption': 'Study Group',
          'markdown': 'ชื่ออังกฤษ : Study Group\n\n'
          '**ยุนกามิน เด็กหนุ่มที่ต้องการเกรดดีๆ เพื่อที่เขาจะสามารถเข้าเรียนต่อในมหาลัยชั้นนำได้ ทว่าเขาไม่ได้มีหัวด้านการเรียนสักเท่าไหร่ ทางออกเดียวคือการ**เข้าเรียนในโรงเรียนสุดห่วยที่เต็มไปด้วยอันธพาล เพื่อที่จะได้มีเกรดดีๆ\n\n'
          'แต่**การทำตัวเป็นเด็กเนิร์ดตั้งใจเรียนท่ามกลางโรงเรียนที่เต็มไปด้วยอันธพาลนั้นไม่ใช่เรื่องง่าย** แล้วเขาจะใช้ชีวิตอยู่ในโรงเรียนนี้อย่างสงบ และสอบเข้ามหาลัยดีๆ ได้หรือไม่',
          'web':'Webtoon', 'link': 'https://www.webtoons.com/th/action/studygroup/list?title_no=1595'},
 
-        {'image': 'manhwa_png/ac03.jpg',
+        {'image': 'manhwa_png/ac01.jpg',
          'caption': 'อาชญากรวัยเยาว์',
          'markdown': 'ชื่ออังกฤษ : Juvenile Offender\n\n'
          '**อียุนซอง เยาวชนที่ต้องเข้าสถานพินิจเพราะกระทำความผิด** ทว่าเขาจงใจที่จะเข้าไปที่นั่น เพื่อล้างแค้นพวกคนชั่วที่มีกฎหมาบปกป้องอยู่',
-         'web':'Webtoon', 'link': 'https://www.webtoons.com/th/action/juvenile-offender/list?title_no=5457'}
+         'web':'Webtoon', 'link': 'https://www.webtoons.com/th/action/juvenile-offender/list?title_no=5457'},
+
+        {'image': 'manhwa_png/ac02.jpg',
+         'caption': 'แบคXX',
+         'markdown': 'ชื่ออังกฤษ : Mr. Baek\n\n'
+         '**พี่น้องฝาแฝด แบคโดกยอง และแบคอีซู ที่ใช้ชีวิตต่างกันสุดขั้ว** ได้มาพบจุดพลิกผัน เมื่อแฝดน้องถูกหัวหน้าตัวเองหักหลังตามฆ่า จนต้องยอมทิ้งความเป็นตัวเอง และ**ใช้ชีวิตเป็นพี่ชายของตัวเองเพื่อล้างแค้นคนชั่วเหล่านั้นให้ได้**',
+         'web':'Webtoon', 'link': 'https://www.webtoons.com/th/action/mr-baek/list?title_no=5304'}
 
     ]
     for item in ac:
+        st.image(item['image'], caption=item['caption'], width=200)
+        st.markdown(item['markdown'])
+        st.link_button(item['web'],item['link'])
+
+# Action Time Travel
+if ('Action' in choices or 'Time Travel' in choices) and all(choice in ['Action', 'Time Travel'] for choice in choices):
+    ac_tt = [
+        {'image': 'manhwa_png/ac_tt00.jpg',
+         'caption': 'ปีศาจกลับมาเรียน',
+         'markdown': 'ชื่ออังกฤษ : Devil Returns to School Days\n\n'
+         '**คิมฮยอนซอง นักเรียนดีเด่นที่ถูกพวกนักเลงในโรงเรียนพลักตกจากดาดฟ้าก่อนวันเรียนจบ** อาการของเขาอยู่ในขั้นโคม่า ไม่ตอบสนองใดๆ ยาวนานถึง 10 ปี\n\n'
+         'อยู่มาวันหนึ่งเขาได้ย้อนเวลากลับไปในช่วงก่อนจะเกิดทุกอย่างขึ้น **“ฉันจะแก้แค้นพวกที่เคยกลั่นแกล้ง และพวกที่เมินเฉยให้หมด!”**',
+         'web':'Webtoon', 'link': 'https://www.webtoons.com/th/action/devil-goes-to-school/list?title_no=5456'},
+
+    ]
+    for item in ac_tt:
+        st.image(item['image'], caption=item['caption'], width=200)
+        st.markdown(item['markdown'])
+        st.link_button(item['web'],item['link'])
+
+# Action Reincarnation
+if ('Action' in choices or 'Reincarnation' in choices) and all(choice in ['Action', 'Reincarnation'] for choice in choices):
+    ac_rc = [
+        {'image': 'manhwa_png/ac_rc00.jpg',
+         'caption': 'หมาหัวเน่าเก๋าเกินไป',
+         'markdown': 'ชื่ออังกฤษ : The Strongest Outcast\n\n'
+         '**ชามูกยอล นักมวยฝีมือดีที่ถูกประธานหักหลัง จนเขากลายเป็นอัมพาต** แต่แล้ววิญญาณของชามูกยอลก็ได้เข้าไปสิงร่างของนักเรียนคนหนึ่งที่โดนบูลลี่\n\n'
+         '**เขาจะกลับมาทำตามความฝัน และเอาคืนคนที่ทำให้เขาทุกข์ทรมาน**',
+         'web':'Webtoon', 'link': 'https://www.webtoons.com/th/action/the-strongest-outcast/list?title_no=5324'},
+
+    ]
+    for item in ac_rc:
         st.image(item['image'], caption=item['caption'], width=200)
         st.markdown(item['markdown'])
         st.link_button(item['web'],item['link'])
@@ -184,13 +236,6 @@ if ('Action' in choices or 'Drama' in choices) and all(choice in ['Action', 'Dra
          'web':'Webtoon', 'link': 'https://www.webtoons.com/th/action/high-school-soldier/list?title_no=2438'},
 
         {'image': 'manhwa_png/ac_dm01.jpg',
-         'caption': 'Y2K จงเจริญ',
-         'markdown': 'ชื่ออังกฤษ : Ulzzang Generation\n\n'
-         '**พัคชงอิล นักเรียน ม.ปลาย ได้รับการเลี้ยงดูจากเพื่อนสนิทของพ่อ** ซึ่งพ่อของพัคชองอิลหายตัวไปตั้งแต่เขายังเด็ก วันหนึ่งเขาก็ได้ข่าวว่าพ่อตายแล้ว จึงต้องแวะไปที่สถานีตำรวจเพื่อนำของใช้ของพ่อกลับมาด้วย\n\n'
-         'ในบรรดาข้าวของเหล่านั้น มีโทรศัพท์เก่าๆ ที่เหมือนจะไม่มีแบตแล้ว แต่จู่ๆ ก็มีคนโทรเข้ามา แล้วบอกว่านี่เป็นโทรศัพท์ของเขาอยากจะขอคืน เมื่อนัดเจอกัน **พัคชงอิลก็ต้องตกใจเพราะได้เจอกับพ่อที่ทิ้งเขาไป “นี่ฉันย้อนอดีตมาหรอเนี่ย!?”**',
-         'web':'Webtoon', 'link': 'https://www.webtoons.com/th/action/ulzzang-generation/list?title_no=6031'},
-
-        {'image': 'manhwa_png/ac_dm02.jpg',
          'caption': 'เหยื่ออย่างผมต้องรอด',
          'markdown': 'ชื่ออังกฤษ : To Not Die\n\n'
          '**อิมดาจุน ถูกบูลลี่ที่โรงเรียนจนชินชา และตัดสินใจจะฆ่าตัวตาย** แต่เขาก็ได้เปลี่ยนใจไปตามฆ่าพวกที่เคยแกล้งเขาแทน หลักจากแก้แค้นสำเร็จชีวิตเขาก็ไม่เหมือนเดิม ไม่มีโรงเรียนให้ไป ไม่มีบ้านให้กลับ\n\n'
@@ -199,6 +244,21 @@ if ('Action' in choices or 'Drama' in choices) and all(choice in ['Action', 'Dra
 
     ]
     for item in ac_dm:
+        st.image(item['image'], caption=item['caption'], width=200)
+        st.markdown(item['markdown'])
+        st.link_button(item['web'],item['link'])
+
+# Action Drama Time Travel
+if ('Action' in choices or 'Drama' in choices or 'Time Travel' in choices) and all(choice in ['Action', 'Drama', 'Time Travel'] for choice in choices):
+    ac_dm_tt = [
+        {'image': 'manhwa_png/ac_dm_tt00.jpg',
+         'caption': 'Y2K จงเจริญ',
+         'markdown': 'ชื่ออังกฤษ : Ulzzang Generation\n\n'
+         '**พัคชงอิล นักเรียน ม.ปลาย ได้รับการเลี้ยงดูจากเพื่อนสนิทของพ่อ** ซึ่งพ่อของพัคชองอิลหายตัวไปตั้งแต่เขายังเด็ก วันหนึ่งเขาก็ได้ข่าวว่าพ่อตายแล้ว จึงต้องแวะไปที่สถานีตำรวจเพื่อนำของใช้ของพ่อกลับมาด้วย\n\n'
+         'ในบรรดาข้าวของเหล่านั้น มีโทรศัพท์เก่าๆ ที่เหมือนจะไม่มีแบตแล้ว แต่จู่ๆ ก็มีคนโทรเข้ามา แล้วบอกว่านี่เป็นโทรศัพท์ของเขาอยากจะขอคืน เมื่อนัดเจอกัน **พัคชงอิลก็ต้องตกใจเพราะได้เจอกับพ่อที่ทิ้งเขาไป “นี่ฉันย้อนอดีตมาหรอเนี่ย!?”**',
+         'web':'Webtoon', 'link': 'https://www.webtoons.com/th/action/ulzzang-generation/list?title_no=6031'},
+    ]
+    for item in ac_dm_tt:
         st.image(item['image'], caption=item['caption'], width=200)
         st.markdown(item['markdown'])
         st.link_button(item['web'],item['link'])
@@ -249,22 +309,15 @@ if ('Action' in choices or 'Fantasy' in choices) and all(choice in ['Action', 'F
          '**บาโฟเมต บอสแห่งหอคอยห้วงลึก ที่กำลังเบื่อหน่ายกับการต่อสู้แบบเดิมๆ** วันหนึ่งมีฮันเตอร์ผู้แข็งแกร่งปรากฎขึ้นต่อหน้าเขา นั่นยิ่งทำให้เขารู้สึกตื่นเต้นกับการมีอยู่ของมนุษย์\n\n'
          'วันหนึ่ง**เขาได้กลายเป็นมนุษย์ แต่เนื้อแท้ข้างในก็ยังเป็นปีศาจ**',
          'web':'Webtoon', 'link': 'https://www.webtoons.com/th/fantasy/i-was-the-final-boss/list?title_no=5587'},
-        
+                
         {'image': 'manhwa_png/ac_fs02.jpg',
-         'caption': 'อ่านชะตาวันสิ้นโลก',
-         'markdown': 'ชื่ออังกฤษ : Omniscient Reader\n\n'
-         '**ชีวิตของพนักงานออฟฟิศธรรมดาคนหนึ่งชื่อว่า คิมดกจา ที่เปลี่ยนไปในชั่วพริบตา**\n\n'
-         'เนื่องจากตอนที่เขากำลังนั่งรถไฟฟ้ากลับบ้าน ได้เกิดเหตุการณ์ประหลาดขึ้น โลกทั้งโลกกำลงจะล่มสลาย แต่เหตุการณ์นี้กลับคุ้นเหมือนเคยเจอที่ไหน **“นี่มันนิยายที่เราอ่านอยู่คนเดียวนี่!?”**',
-         'web':'Webtoon', 'link': 'https://www.webtoons.com/th/fantasy/omniscient-reader/list?title_no=2106'},
-        
-        {'image': 'manhwa_png/ac_fs03.jpg',
          'caption': 'หลังวันสิ้นโลก',
          'markdown': 'ชื่ออังกฤษ : The World After the Fall\n\n'
          'เมื่อ**โลกได้บังคับให้มนุษย์ต้องกลายเป็น ทาวเวอร์วอล์กเกอร์** เพื่อทำลายหอคอยประหลาดที่อยู่ใจกลางเมือง ความหวังของมวลมนุษยชาติแทบจะน้อยนิด\n\n'
          '**มีวอล์กเกอร์คนหนึ่งสามารถพิชิตหอคอยได้สำเร็จ ทว่าความเชื่อที่เขามีต่อโลกดูเหมือนจะไม่มีค่าอีกต่อไป** เกิดอะไรขึ้นกับเขากันนะ',
          'web':'Webtoon', 'link': 'https://www.webtoons.com/th/fantasy/the-world-after-the-fall/list?title_no=4205'},
 
-        {'image': 'manhwa_png/ac_fs04.jpg',
+        {'image': 'manhwa_png/ac_fs03.jpg',
          'caption': 'Solo Leveling',
          'markdown': 'ชื่ออังกฤษ : Only I Level Up\n\n'
          '**โลกที่มีการปรากฏตัวของ เกต** ประตูเชื่อมมิติที่ภายในเต็มไปด้วยมอนสเตอร์มากมาย และ**ผู้คนในโลกที่ถูกปลุกพลังจะกลายเป็น ฮันเตอร์** ที่สามารถต่อกรกับพวกมันได้\n\n'
@@ -277,35 +330,96 @@ if ('Action' in choices or 'Fantasy' in choices) and all(choice in ['Action', 'F
         st.markdown(item['markdown'])
         st.link_button(item['web'],item['link'])
 
+# Action Fantasy Reincarnation
+if ('Action' in choices or 'Fantasy' in choices or 'Reincarnation' in choices) and all(choice in ['Action', 'Fantasy', 'Reincarnation'] for choice in choices):
+    ac_fs_rc = [
+        {'image': 'manhwa_png/ac_fs_rc00.jpg',
+         'caption': 'The Beginning After The End',
+         'markdown': 'ชื่ออังกฤษ : The Beginning After The End\n\n'
+         '**กษัตริย์เกรย์ผู้ยิ่งใหญ่ ได้เกิดใหม่ในโลกที่เต็มไปด้วยการใช้เวทมนตร์** และมีสัตว์ประหลาดมากมาย แถมยังมาอยู่ในร่างทารกนามว่า อาร์เธอร์\n\n'
+         'แต่เขาไม่จมปลักอยู่กับอดีต และการตามหาสาเหตุที่มาอยู่ที่นี่ เขาได้ตัดสินใจปรับตัวกับชีวิตใหม่ **เมื่ออาร์เธอร์เติบโตขึ้นเขาก็ยิ่งได้พบศักยภาพของพลังที่ถูกปลุกขึ้น**',
+         'web':'KaKao Webtoon', 'link': 'https://th.kakaowebtoon.com/content/The_Beginning_After_The_End/468?tab=episode'},
+
+        {'image': 'manhwa_png/ac_fs_rc01.jpg',
+         'caption': 'เกิดใหม่ในร่างดยุก',
+         'markdown': 'ชื่ออังกฤษ : Returned as the Duke\n\n'
+         '**ดยุกอารอน โอรสของอดีตจักรพรรดิ ผู้ที่ได้รับพลังพิเศษ พรแห่งมังกร** ต้องออกมาจากจักรวรรดิเพื่อใช้ชีวิตอย่างเจียมตัวในดินแดนอันไกลโพ้น แม้ว่าเขาจะไม่ย่างกรายเข้าไปยุ่งกับจักรวรรดิแล้ว แต่จักรพรรดิเจอรอนผู้มีศักดิ์เป็นอากลับไม่ยอมรามือจากเขา\n\n'
+         'คืนหนึ่ง**จักรพรรดิเจอรอนได้ส่งกองทัพมาถล่มดินแดนของดยุกอารอนจนล่มสลาย** ซึ่งพ่อบ้านชราคนหนึ่งได้เสียชีวิตจากเหตุการณ์นั้นด้วย ทว่าในตอนที่**ชายชรากำลังคิดว่าทุกอย่างมันจบแล้ว เขาก็รู้สึกตัวในร่างของท่านดยุกอารอน เมื่อ 20 ปีก่อน**',
+         'web':'Webtoon', 'link': 'https://www.webtoons.com/th/fantasy/return-as-the-duke/list?title_no=5403'},
+
+    ]
+    for item in ac_fs_rc:
+        st.image(item['image'], caption=item['caption'], width=200)
+        st.markdown(item['markdown'])
+        st.link_button(item['web'],item['link'])
+
+# Action Fantasy Time Travel
+if ('Action' in choices or 'Fantasy' in choices or 'Time Travel' in choices) and all(choice in ['Action', 'Fantasy', 'Time Travel'] for choice in choices):
+    ac_fs_tt = [
+        {'image': 'manhwa_png/ac_fs_tt00.jpg',
+         'caption': 'การกลับมาของแรงเกอร์ระดับ SSS',
+         'markdown': 'ชื่ออังกฤษ : The SSS-Ranker Returns\n\n'
+         '**โรคาน ราชาแห่งความรุนแรง**ผู้อยู่เหนือทุกคนจากการเป็นเพลเยอร์ เขาแข็งแกร่งที่สุดในเกมเสมือนจริง แต่ต้อง**สูญเสียทุกอย่างจากการถูกกิลด์ของศัตรูฆ่าตาย**\n\n'
+         'เมื่อลืมตาตื่นขึ้น เขาได้ย้อนเวลากลับมาอีกครั้ง **“รอก่อนเถอะ ไอ้พวกเวรทั้งหลาย ฉันจะขยี้พวกแกให้เละเลย”**',
+         'web':'KaKao Webtoon', 'link': 'https://th.kakaowebtoon.com/content/การกลับมาของแรงเกอร์ระดับ_SSS/567?tab=episode'},
+
+        {'image': 'manhwa_png/ac_fs_tt01.jpg',
+         'caption': 'การกลับมาของจอมเวทระดับ 8',
+         'markdown': 'ชื่ออังกฤษ : The Return of the 8th Class Mage\n\n'
+         '**เอียน เพจ จอมเวทระดับ 8 คนแรกของโลก** ยอมมือเปื้อนเลือดมาหลายสิบปีเพื่อรวมอาณาจักรเข้ากับจักรพรรดิแร็กนาร์ แต่กลับ**ถูกแร็กนาร์ที่เป็นทั้งเพื่อน และกษัตริย์หักหลัง** เขาจึงใช้กริชสลักมนตร์กาลแทงเข้าที่หัวใจของตัวเองเพื่อจบชีวิต\n\n'
+         'เขาได้**ย้อนเวลากลับมายังอดีตเมื่อ 30 ปีที่แล้ว** บัดนี้เขาจะทำอย่างไรต่อไป จะแก้แค้นหรือเลือกเส้นทางใหม่กันแน่',
+         'web':'KaKao Webtoon', 'link': 'https://th.kakaowebtoon.com/content/การกลับมาของจอมเวทระดับ_8/299?tab=episode'},
+
+        {'image': 'manhwa_png/ac_fs_tt02.jpg',
+         'caption': 'เกิดใหม่นักรบพันธุ์ระห่ำ 2',
+         'markdown': 'ชื่ออังกฤษ : Doom Breaker\n\n'
+         '“แม้ผู้มอบโอกาศให้คือพระเจ้าที่น่าสะอิดสะเอียน แต่มันก็คือโอกาศ” **ผู้รอดชีวิตคนสุดท้ายของมนุษยชาติ เซเฟอร์** ได้รับโอกาสจากทวยเทพให้**ย้อนเวลา**กลับไปเมื่อ 10 ปีก่อน\n\n'
+         'ช่วงเวลาที่เทพปีศาจช่วงชิงทุกอย่างไปจากมนุษย์ ส่วนเทพเจ้าก็ยังปฏิบัติกับมนุษย์เหมือนเป็นเพียงของเล่น **“ครั้งนี้แหละ ข้าจะเป็นคนตัดคอพวกเจ้าทั้งหมดเอง!”**',
+         'web':'Webtoon', 'link': 'https://www.webtoons.com/th/fantasy/doom-breaker-2/list?title_no=5354'},
+
+    ]
+    for item in ac_fs_tt:
+        st.image(item['image'], caption=item['caption'], width=200)
+        st.markdown(item['markdown'])
+        st.link_button(item['web'],item['link'])
+
 # Action Fantasy Adventure
 if ('Action' in choices or 'Fantasy' in choices or 'Adventure' in choices) and all(choice in ['Action', 'Fantasy', 'Adventure'] for choice in choices):
     ac_fs_ad = [
         {'image': 'manhwa_png/ac_fs_ad00.jpg',
-         'caption': 'หวนคืนสู่ฮวาซาน',
-         'markdown': 'ชื่ออังกฤษ : Return of The Blossoming Blade\n\n'
-         '**ศิษย์รุ่น 13 แห่งฮวาซาน ผู้ปลิดชีพเทพมารที่รุกรานทั่วพิภพลงได้** และเขาได้สิ้นใจบนจุดสูงสุดของยอดเขา\n\n'
-         'เมื่อลืมตาตื่นขึ้น เขากลับกลายเป็นยาจกไร้กำลังซะอย่างนั้น **“นี่ข้าเกิดใหม่เป็นขอทานหรือนี่!?”**',
-         'web':'Webtoon', 'link': 'https://www.webtoons.com/th/fantasy/return-of-the-blossoming-blade/list?title_no=3029'},
-
-        {'image': 'manhwa_png/ac_fs_ad01.jpg',
-         'caption': 'มหาจอมเวทผู้กลับมาอีกครั้งหลัง 4000 ปี',
-         'markdown': 'ชื่ออังกฤษ : The Archmage Returns After 4000 Years\n\n'
-         '**ลูคัส โทรว์แมน มหาจอมเวทผู้ยิ่งใหญที่ถูกลงโทษ**เพราะไปท้าทายพระเจ้า จึงถูกกักขังเป็นเวลายาวนานถึง 4000 ปี\n\n'
-         'หลังจากนั้น เขาได้เข้ามาอยู่ในร่างของนักเรียนผู้อ่อนแออย่าง เฟรย์ เบลด ที่ถูกเรียกว่าความอัปยศของอะคาเดมี **มหาจอมเวทจะใช้ร่างนี้แก้แค้นพวกที่จับเขาขังถึง 4000 ปีได้ไหม**',
-         'web':'KaKao Webtoon', 'link': 'https://th.kakaowebtoon.com/content/มหาจอมเวทผู้กลับมาอีกครั้งหลัง_4000_ปี/10?tab=episode'},
-
-        {'image': 'manhwa_png/ac_fs_ad02.jpg',
          'caption': 'ฮีลเลอร์กำมะลอ',
          'markdown': 'ชื่ออังกฤษ : Life of a Quack Healer\n\n'
          '**คังซึงฮยอน ตื่นขึ้นมาในโลกแฟนตาซีที่เขาได้รับมอบหมายให้เป็นฮีลเลอร์ ทว่าสกิลติดตัวเขากลับไม่ใช่พลังฮีล** แม้ว่าเขาจะมีสกิลที่เก่งกาจอื่นๆ อีกมากมาย แต่ถ้าฮีลไม่ได้แล้วจะใช้ชีวิตในฐานะฮีลเลอร์ยังไง?',
          'web':'Webtoon', 'link': 'https://www.webtoons.com/th/fantasy/life-of-a-quack-healer/list?title_no=5539'},
 
-        {'image': 'manhwa_png/ac_fs_ad03.jpg',
+        {'image': 'manhwa_png/ac_fs_ad01.jpg',
          'caption': 'มาย S-คลาส ฮันเตอร์',
          'markdown': 'ชื่ออังกฤษ : My S-Class Hunters\n\n'
          '**ฮันยูจิน ที่ยอมลาออกจากโรงเรียนเพื่อหาเงินเลี้ยงดูน้องชาย วันหนึ่ง เกต ที่เชื่อมต่อกับดันเดี้ยนของโลกอื่นได้ปรากฏขึ้น** ท่ามกลางความโกลาหลก็ได้มีบางคนถูกปลุกพลังหลังประจันหน้ากับสัตว์ประหลาด และกลายเป็นฮันเตอร์\n\n'
          '**น้องชายของ ฮันยูจิน ได้กลายเป็นฮันเตอร์ระดับ S แต่เขากลับอยู่แค่ระดับ F** เท่านั้น ต่อไปนี้เขาจะเป็นอย่างไรต่อไป',
          'web':'Webtoon', 'link': 'https://www.webtoons.com/th/fantasy/my-sclass-hunters/list?title_no=3882'},
+
+        {'image': 'manhwa_png/ac_fs_ad02.jpg',
+         'caption': 'มือใหม่แกร่งเกินต้าน',
+         'markdown': 'ชื่ออังกฤษ : The Overpowered Newbie\n\n'
+         '**แจจู โตมาในสถานเลี้ยงเด็กกำพร้า** วันหนึ่ง เขาได้ยินว่าสถานเลี้ยงเด็กที่เคยอยู่จะปิดตัวลงใน 3 ปี ทำให้เขาอยากหาเงินมาบริจาคเพื่อช่วยเหลือที่แห่งนี้\n\n'
+         'ขณะที่หาเงิน แจจูได้รับข้อความประหลาด และเห็นวิดีโอที่ตัวเองกำลังพิชิตหอคอยอยู่ เขาคิดว่า คงถึงคิวของเราที่จะได้เข้าไปในหอคอย เพราะ 7 ปีที่แล้วมีการสุ่มคนเข้าไปเช่นกัน\n\n'
+         '**ถ้าพิชิตหอคอยสำเร็จก็จะกลายเป็น ผู้ปลุกพลัง และได้รับเงินทองมากมาย** แล้วแบบนี้จะไม่เข้าร่วมได้อย่างไร',
+         'web':'KaKao Webtoon', 'link': 'https://th.kakaowebtoon.com/content/มือใหม่แกร่งเกินต้าน/424?tab=episode'},
+
+        {'image': 'manhwa_png/ac_fs_ad03.jpg',
+         'caption': 'เพลเยอร์เลเวลไม่อัป',
+         'markdown': 'ชื่ออังกฤษ : The Player Who Can’t Level Up\n\n'
+         '**คิมคีกยู ถูกรับเลือกให้เป็นเพลเยอร์**อย่างที่เขาเคยฝันไว้ เขา**ได้รับพลังพิเศษสุดหายาก แต่กลับไม่สามารถอัปเลเวลให้พ้นจากเลเวล 1** ได้\n\n'
+         'แล้วแบบนี้เขาจะทำยังไงให้แข็งแกร่งขึ้นกันล่ะ',
+         'web':'KaKao Webtoon', 'link': 'https://th.kakaowebtoon.com/content/เพลเยอร์เลเวลไม่อัป/266?tab=episode'},
+
+        {'image': 'manhwa_png/ac_fs_ad04.jpg',
+         'caption': 'อ่านชะตาวันสิ้นโลก',
+         'markdown': 'ชื่ออังกฤษ : Omniscient Reader\n\n'
+         '**ชีวิตของพนักงานออฟฟิศธรรมดาคนหนึ่งชื่อว่า คิมดกจา ที่เปลี่ยนไปในชั่วพริบตา**\n\n'
+         'เนื่องจากตอนที่เขากำลังนั่งรถไฟฟ้ากลับบ้าน ได้เกิดเหตุการณ์ประหลาดขึ้น โลกทั้งโลกกำลงจะล่มสลาย แต่เหตุการณ์นี้กลับคุ้นเหมือนเคยเจอที่ไหน **“นี่มันนิยายที่เราอ่านอยู่คนเดียวนี่!?”**',
+         'web':'Webtoon', 'link': 'https://www.webtoons.com/th/fantasy/omniscient-reader/list?title_no=2106'},
 
     ]
     for item in ac_fs_ad:
@@ -329,12 +443,41 @@ if ('Action' in choices or 'Fantasy' in choices or 'Adventure' in choices or 'Ti
          '**คิมกงจา ฮันเตอร์ปลายแถวระดับ F ได้ครอบครองสกิลระดับ S+** ที่ทำให้เขาสามารถก๊อบปี้สกิลของฮันเตอร์คนอื่นได้ โดยมี**เงื่อนไขเพียงอย่างเดียวคือเขาต้องตาย**',
          'web':'KaKao Webtoon', 'link': 'https://th.kakaowebtoon.com/content/นักล่าพลีชีพ_ระดับ_SSS/98?tab=episode'},
 
+        {'image': 'manhwa_png/ac_fs_ad_tt02.jpg',
+         'caption': 'หวนคืนสู่ฮวาซาน',
+         'markdown': 'ชื่ออังกฤษ : Return of The Blossoming Blade\n\n'
+         '**ศิษย์รุ่น 13 แห่งฮวาซาน ผู้ปลิดชีพเทพมารที่รุกรานทั่วพิภพลงได้** และเขาได้สิ้นใจบนจุดสูงสุดของยอดเขา\n\n'
+         'เมื่อลืมตาตื่นขึ้น เขากลับกลายเป็นยาจกไร้กำลังซะอย่างนั้น **“นี่ข้าเกิดใหม่เป็นขอทานหรือนี่!?”**',
+         'web':'Webtoon', 'link': 'https://www.webtoons.com/th/fantasy/return-of-the-blossoming-blade/list?title_no=3029'},
+
+        {'image': 'manhwa_png/ac_fs_ad_tt03.jpg',
+         'caption': 'คิล เดอะ ฮีโร่',
+         'markdown': 'ชื่ออังกฤษ : Kill the Hero\n\n'
+         '**คิมอูจิน** เชื่อสุดใจว่าเหล่าเพลเยอร์ที่ได้รับพลังวิเศษคือ ฮีโร่ กอบกู้โลกจากดันเจี้ยนมากมายที่ปรากฎขึ้น ทว่าเขากลับ**ถูกฮีโร่ฆ่าตายเพื่อหวังจะครองโลก** แต่แล้วเขาก็ได้**ย้อนเวลากลับมามีชีวิตอีกครั้ง**\n\n'
+         '**“ครั้งนี้แหละ จะเอาคืนเจ้าฮีโร่นั่นให้ได้!”**',
+         'web':'KaKao Webtoon', 'link': 'https://th.kakaowebtoon.com/content/Kill_the_Hero/191?tab=episode'},
+
     ]
     for item in ac_fs_ad_tt:
         st.image(item['image'], caption=item['caption'], width=200)
         st.markdown(item['markdown'])
         st.link_button(item['web'],item['link'])
 
+# Action Fantasy Adventure Reincarnation
+if ('Action' in choices or 'Fantasy' in choices or 'Adventure' in choices or 'Reincarnation' in choices) and all(choice in ['Action', 'Fantasy', 'Adventure', 'Reincarnation'] for choice in choices):
+    ac_fs_ad_rc = [
+        {'image': 'manhwa_png/ac_fs_ad_rc00.jpg',
+         'caption': 'มหาจอมเวทผู้กลับมาอีกครั้งหลัง 4000 ปี',
+         'markdown': 'ชื่ออังกฤษ : The Archmage Returns After 4000 Years\n\n'
+         '**ลูคัส โทรว์แมน มหาจอมเวทผู้ยิ่งใหญที่ถูกลงโทษ**เพราะไปท้าทายพระเจ้า จึงถูกกักขังเป็นเวลายาวนานถึง 4000 ปี\n\n'
+         'หลังจากนั้น เขาได้เข้ามาอยู่ในร่างของนักเรียนผู้อ่อนแออย่าง เฟรย์ เบลด ที่ถูกเรียกว่าความอัปยศของอะคาเดมี **มหาจอมเวทจะใช้ร่างนี้แก้แค้นพวกที่จับเขาขังถึง 4000 ปีได้ไหม**',
+         'web':'KaKao Webtoon', 'link': 'https://th.kakaowebtoon.com/content/มหาจอมเวทผู้กลับมาอีกครั้งหลัง_4000_ปี/10?tab=episode'},
+
+    ]
+    for item in ac_fs_ad_rc:
+        st.image(item['image'], caption=item['caption'], width=200)
+        st.markdown(item['markdown'])
+        st.link_button(item['web'],item['link'])
 
 # Action Fantasy Drama
 if ('Action' in choices or 'Fantasy' in choices or 'Drama' in choices) and all(choice in ['Action', 'Fantasy', 'Drama'] for choice in choices):
@@ -383,8 +526,47 @@ if ('Fantasy' in choices or 'Adventure' in choices) and all(choice in ['Fantasy'
          '**คิมซูโฮ นักศึกษาวิศวกรรมโยธา ที่ได้หลุดเข้ามาอยู่ในนิยายแฟนตาซีที่อ่านเมื่อคืน** ซึ่งตัวละครที่เขาเข้ามาสวมร่างนั้นคือ ลอยด์ ฟรอนเทร่า ชนชั้นสูงที่ขี้เกียจตัวเป็นขนชอบเมาหัวราน้ำตลอด แถมครอบครัวก็ยังเป็นหนี้อีกต่างหาก\n\n'
          '**ซูโฮจึงประยุกต์ใช้ความรู้ทางด้านวิศวกรรมที่มีอยู่ เพิ่อเริ่มต้นชีวิตใหม่อย่างใสสะอาด** พร้อมได้รับความช่วยเหลือจากเจ้าแฮมสเตอร์ยักษ์ อัศวิน และเวทมนตร์ของโลกใบนี้',
          'web':'Webtoon', 'link': 'https://www.webtoons.com/th/fantasy/the-greatest-estate-developer/list?title_no=4646'},
+
     ]
     for item in fs_ad:
+        st.image(item['image'], caption=item['caption'], width=200)
+        st.markdown(item['markdown'])
+        st.link_button(item['web'],item['link'])
+
+# Fantasy Adventure Drama
+if ('Fantasy' in choices or 'Adventure' in choices or 'Drama' in choices) and all(choice in ['Fantasy', 'Adventure', 'Drama'] for choice in choices):
+    fs_ad_dm = [
+        {'image': 'manhwa_png/fs_ad_dm00.jpg',
+         'caption': 'นักบุญซะที่ไหน พลังแพทย์แผนใหม่ต่างหาก',
+         'markdown': 'ชื่ออังกฤษ : The Holy Power of Modern Medicine\n\n'
+         '**หมอคนหนึ่งได้รับฉายาหัตถ์เทวดา** แต่ในชีวิตของเขาไม่ได้มีเวลาหยุดพัก แม้จะเป็นวันหยุดก็ยังต้องทำงาน\n\n'
+         'วันหนึ่ง ขณะที่เขากำลังเดินกลับบ้านก็ถูกรถบรรทุกชนเสียชีวิต **“แต่ทำไมถึงยังลืมตาได้อยู่ล่ะ แล้วคนพวกนั้นทำไมแต่งตัวแปลกๆ นี่เรามาเกิดใหม่ในโลกแฟนตาซีงั้นเหรอ?”**',
+         'web':'KaKao Webtoon', 'link': 'https://th.kakaowebtoon.com/content/นักบุญซะที่ไหน_พลังแพทย์แผนใหม่ต่างหาก/512?tab=episode'},
+
+    ]
+    for item in fs_ad_dm:
+        st.image(item['image'], caption=item['caption'], width=200)
+        st.markdown(item['markdown'])
+        st.link_button(item['web'],item['link'])
+
+# Fantasy Reincarnation
+if ('Reincarnation' in choices or 'Fantasy' in choices)and all(choice in ['Reincarnation', 'Fantasy'] for choice in choices):
+    fs_rc = [
+        {'image': 'manhwa_png/fs_rc00.jpg',
+         'caption': 'อันธพาลแห่งตระกูลเคานต์',
+         'markdown': 'ชื่ออังกฤษ : Lout of Count’s Family\n\n'
+         '**คิมรกซู ได้เข้าไปอยู่ในร่างอันธพาลตัวร้ายในนิยายชื่อว่า เคล** เขาจึงตั้งใจจะมีชีวิตรอดโดยไม่ถูกตัวเอกของเรื่อง ชเวฮัน อัดจนเละเหมือนในนิยาย\n\n'
+         'เขาจะมีชีวิตรอด ไม่เจ็บป่วย และใช้ชีวิตอย่างสงบสุขได้หรือไม่',
+         'web':'KaKao Webtoon', 'link': 'https://th.kakaowebtoon.com/content/อันธพาลแห่งตระกูลเคานต์/14?tab=episode'},
+
+        {'image': 'manhwa_png/fs_rc01.jpg',
+         'caption': 'จอมเวทเกิดใหม่ในรอบ 66666 ปี',
+         'markdown': 'ชื่ออังกฤษ : 66,666 Years : Advent of the Dark Mage\n\n'
+         '**ดิอาโบล โวลพีร์ จอมเวทแห่งศาสตร์มืดผู้ยิ่งใหญ่ ตกหลุมพรางของเหล่า 12 เทพสวรรค์ จนต้องถูกผนึกตลอดกาล**\n\n'
+         'หลังจาก หกหมื่นหกพันหกร้อยหกสิบหก ปีผ่านไป **จอมเวทที่น่าเกรงขามมากที่สุดในประวัติศาสตร์ได้ลงมาจุติบนโลก** ในฐานะบุตรชายหัวแก้วหัวแหวนของ เอิร์ลเวลตัน อีกครั้ง',
+         'web':'Webtoon', 'link': 'https://www.webtoons.com/th/fantasy/66666-years-advent-of-the-dark-mage/list?title_no=3680'},
+    ]
+    for item in fs_rc:
         st.image(item['image'], caption=item['caption'], width=200)
         st.markdown(item['markdown'])
         st.link_button(item['web'],item['link'])
@@ -398,7 +580,6 @@ if ('Fantasy' in choices or 'Drama' in choices) and all(choice in ['Fantasy', 'D
          '**ฮันซึงมุน ได้ลงสมัครเลือกตั้ง**ทั้งที่ก็ไม่มีตวามเป็นไปได้ว่าจะชนะ **แต่กลับชนะซะอย่างงั้น** ทว่า**ในวันที่เขาเข้ารับตำแหน่งกลับเกิดเรื่องโกลาหลขึ้น** ปีศาจหลั่งไหลเข้ามาโจมตีผู้คน\n\n'
          'เขาจะทำอย่างไรต่อไป และจะจัดการกับสถานการณ์นี้ยังไง',
          'web':'KaKao Webtoon', 'link': 'https://th.kakaowebtoon.com/content/เมื่อมีเกตเปิดในวันแรกที่ผมรับตำแหน่ง/610?tab=episode'},
-
     ]
     for item in fs_dm:
         st.image(item['image'], caption=item['caption'], width=200)
@@ -419,7 +600,6 @@ if ('Fantasy' in choices or 'Comedy' in choices or 'Time Travel' in choices) and
         st.image(item['image'], caption=item['caption'], width=200)
         st.markdown(item['markdown'])
         st.link_button(item['web'],item['link'])
-
 
 
 # Horror
@@ -444,43 +624,56 @@ if 'Horror' in choices and all(choice in ['Horror'] for choice in choices):
          'markdown': 'ชื่ออังกฤษ : Tastes of Horror\n\n'
          '**มันฮวาที่รวมเรื่องสั้นสยองขวัญจากนักเขียน และนักวาดหลายคน** ทำให้เนื้อเรื่องในแต่ละตอนชวนสนุก ตื่นเต้น เร้าใจ',
          'web':'KaKao Webtoon', 'link': 'https://th.kakaowebtoon.com/content/TASTES_OF_HORROR/513?tab=episode'},
-
     ]
     for item in hr:
         st.image(item['image'], caption=item['caption'], width=200)
         st.markdown(item['markdown'])
         st.link_button(item['web'],item['link'])
 
-# Horror Drama
-if ('Horror' in choices or 'Drama' in choices) and all(choice in ['Horror', 'Drama'] for choice in choices):
-    hr_dm = [
-        {'image': 'manhwa_png/hr_dm00.jpg',
+# Horror Survival
+if ('Horror' in choices or 'Survival' in choices) and all(choice in ['Horror', 'Survival'] for choice in choices):
+    hr_sv = [
+        {'image': 'manhwa_png/hr_sv00.jpg',
+         'caption': 'ปริศนาห้องปิดตาย',
+         'markdown': 'ชื่ออังกฤษ : Escape Room\n\n'
+         '**แพ็กซอนอู ชายหนุ่มที่นิสัยแปลกแยกจากคนอื่น ได้ตื่นขึ้นมาในห้องลึกลับแห่งหนึ่ง** เขาต้องไขปริศนาจากคำใบ้ต่างๆ แข่งกับเวลา เพื่อหาทางออกไปจากเกมที่ต้องเดิมพันด้วยชีวิต',
+         'web':'Webtoon', 'link': 'https://www.webtoons.com/th/horror/escape-room/list?title_no=3030'},
+    ]
+    for item in hr_sv:
+        st.image(item['image'], caption=item['caption'], width=200)
+        st.markdown(item['markdown'])
+        st.link_button(item['web'],item['link'])
+
+# Horror Drama Thriller
+if ('Horror' in choices or 'Drama' in choices or 'Thriller' in choices) and all(choice in ['Horror', 'Drama', 'Thriller'] for choice in choices):
+    hr_dm_tr = [
+        {'image': 'manhwa_png/hr_dm_tr00.jpg',
          'caption': 'ปีศาจอยู่ระหว่างเรา',
          'markdown': 'ชื่ออังกฤษ : No Devil\n\n'
          'มันฮวารวมเรื่องระทึกขวัญของ **เหล่ามนุษย์ ที่ต้องพบเจอกับปีศาจ** เป็นดั่งฝันร้ายสุดหลอน',
          'web':'Webtoon', 'link': 'https://www.webtoons.com/th/thriller/no-devil/list?title_no=5404'},
     ]
-    for item in hr_dm:
+    for item in hr_dm_tr:
         st.image(item['image'], caption=item['caption'], width=200)
         st.markdown(item['markdown'])
         st.link_button(item['web'],item['link'])
 
-# Horror Action Drama
-if ('Horror' in choices or 'Action' in choices or 'Drama' in choices) and all(choice in ['Horror', 'Action', 'Drama'] for choice in choices):
-    hr_ac_dm = [
-                {'image': 'manhwa_png/hr_ac_dm00.jpg',
+# Horror Action Drama Thriller
+if ('Horror' in choices or 'Action' in choices or 'Drama' in choices or 'Thriller' in choices) and all(choice in ['Horror', 'Action', 'Drama', 'Thriller'] for choice in choices):
+    hr_ac_dm_tr = [
+        {'image': 'manhwa_png/hr_ac_dm_tr00.jpg',
          'caption': 'สวีทโฮม',
          'markdown': 'ชื่ออังกฤษ : Sweet Home\n\n'
          '**ฮยอนซู ที่สูญเสียครอบครัวทั้งหมดไปในอุบัติเหตุ** เขาได้ย้ายไปอยู่อพาร์ทเมนต์ที่มีค่าเช่าราคาถูก และเก็บตัวหลบหนีจากสังคม พร้อมกับตัดสินใจกำหนดวันฆ่าตัวตายให้กับตัวเอง\n\n'
          'วันหนึ่งได้เกิดเหตุการณ์ประหลาดขึ้น **มีปีศาจออกไล่ฆ่าคน และคนที่ตายก็กลายเป็นปีศาจ** ฮยอนซู จะทำยังไงจะเอาชีวิตรอดหรือตายไปแบบที่เคยคิดไว้ดี',
          'web':'Webtoon', 'link': 'https://www.webtoons.com/th/thriller/sweet-home/list?title_no=1257'},
     ]
-    for item in hr_ac_dm:
+    for item in hr_ac_dm_tr:
         st.image(item['image'], caption=item['caption'], width=200)
         st.markdown(item['markdown'])
         st.link_button(item['web'],item['link'])
 
-# Horror Time Travel Survival
+# Horror Time Travel Survival 
 if ('Horror' in choices or 'Time Travel' in choices or 'Survival' in choices) and all(choice in ['Horror', 'Time Travel', 'Survival'] for choice in choices):
     hr_tt_sv = [
         {'image': 'manhwa_png/hr_tt_sv00.jpg',
@@ -496,40 +689,31 @@ if ('Horror' in choices or 'Time Travel' in choices or 'Survival' in choices) an
         st.link_button(item['web'],item['link'])
 
 
-# Reincarnation Fantasy
-if ('Reincarnation' in choices or 'Fantasy' in choices)and all(choice in ['Reincarnation', 'Fantasy'] for choice in choices):
-    rc_fs = [
-        {'image': 'manhwa_png/rc_fs00.jpg',
-         'caption': 'อันธพาลแห่งตระกูลเคานต์',
-         'markdown': 'ชื่ออังกฤษ : Lout of Count’s Family\n\n'
-         '**คิมรกซู ได้เข้าไปอยู่ในร่างอันธพาลตัวร้ายในนิยายชื่อว่า เคล** เขาจึงตั้งใจจะมีชีวิตรอดโดยไม่ถูกตัวเอกของเรื่อง ชเวฮัน อัดจนเละเหมือนในนิยาย\n\n'
-         'เขาจะมีชีวิตรอด ไม่เจ็บป่วย และใช้ชีวิตอย่างสงบสุขได้หรือไม่',
-         'web':'KaKao Webtoon', 'link': 'https://th.kakaowebtoon.com/content/อันธพาลแห่งตระกูลเคานต์/14?tab=episode'},
-
-        {'image': 'manhwa_png/rc_fs01.jpg',
-         'caption': 'จอมเวทเกิดใหม่ในรอบ 66666 ปี',
-         'markdown': 'ชื่ออังกฤษ : 66,666 Years : Advent of the Dark Mage\n\n'
-         '**ดิอาโบล โวลพีร์ จอมเวทแห่งศาสตร์มืดผู้ยิ่งใหญ่ ตกหลุมพรางของเหล่า 12 เทพสวรรค์ จนต้องถูกผนึกตลอดกาล**\n\n'
-         'หลังจาก หกหมื่นหกพันหกร้อยหกสิบหก ปีผ่านไป **จอมเวทที่น่าเกรงขามมากที่สุดในประวัติศาสตร์ได้ลงมาจุติบนโลก** ในฐานะบุตรชายหัวแก้วหัวแหวนของ เอิร์ลเวลตัน อีกครั้ง',
-         'web':'Webtoon', 'link': 'https://www.webtoons.com/th/fantasy/66666-years-advent-of-the-dark-mage/list?title_no=3680'},
-
+# Thriller Survival
+if ('Thriller' in choices or 'Survival' in choices) and all(choice in ['Thriller', 'Survival'] for choice in choices):
+    tr_sv = [
+        {'image': 'manhwa_png/tr_sv00.jpg',
+         'caption': 'วันดีคืนดี โซลก็…',
+         'markdown': 'ชื่ออังกฤษ : One Day in Seoul\n\n'
+         '**เหล่านักเรียนม.ปลาย ที่ไปทัศนศึกษาที่โซล** แต่กลับต้อง**เอาตัวรอดจากการแพร่ระบาดของเชื้อไวรัส**ปริศนา ที่จะเปลี่ยนให้ทุกคนกลายเป็นสัตว์ประหลาด',
+         'web':'Webtoon', 'link': 'https://www.webtoons.com/th/thriller/one-day-in-seoul/list?title_no=5127'},
     ]
-    for item in rc_fs:
+    for item in tr_sv:
         st.image(item['image'], caption=item['caption'], width=200)
         st.markdown(item['markdown'])
         st.link_button(item['web'],item['link'])
 
-# Reincarnation Action Fantasy
-if ('Reincarnation' in choices or 'Action' in choices or 'Fantasy' in choices) and all(choice in ['Reincarnation', 'Action', 'Fantasy'] for choice in choices):
-    rc_ac_fs = [
-        {'image': 'manhwa_png/rc_ac_fs00.jpg',
-         'caption': 'เกิดใหม่ในร่างดยุก',
-         'markdown': 'ชื่ออังกฤษ : Returned as the Duke\n\n'
-         '**ดยุกอารอน โอรสของอดีตจักรพรรดิ ผู้ที่ได้รับพลังพิเศษ พรแห่งมังกร** ต้องออกมาจากจักรวรรดิเพื่อใช้ชีวิตอย่างเจียมตัวในดินแดนอันไกลโพ้น แม้ว่าเขาจะไม่ย่างกรายเข้าไปยุ่งกับจักรวรรดิแล้ว แต่จักรพรรดิเจอรอนผู้มีศักดิ์เป็นอากลับไม่ยอมรามือจากเขา\n\n'
-         'คืนหนึ่ง**จักรพรรดิเจอรอนได้ส่งกองทัพมาถล่มดินแดนของดยุกอารอนจนล่มสลาย** ซึ่งพ่อบ้านชราคนหนึ่งได้เสียชีวิตจากเหตุการณ์นั้นด้วย ทว่าในตอนที่**ชายชรากำลังคิดว่าทุกอย่างมันจบแล้ว เขาก็รู้สึกตัวในร่างของท่านดยุกอารอน เมื่อ 20 ปีก่อน**',
-         'web':'Webtoon', 'link': 'https://www.webtoons.com/th/fantasy/return-as-the-duke/list?title_no=5403'},
+# Thriller Action Drama
+if ('Action' in choices or 'Drama' in choices or 'Thriller' in choices) and all(choice in ['Action', 'Drama', 'Thriller'] for choice in choices):
+    tr_ac_dm = [
+        {'image': 'manhwa_png/tr_ac_dm00.jpg',
+         'caption': 'เด็กหนุ่มผู้ลงทัณฑ์',
+         'markdown': 'ชื่ออังกฤษ : Death Row Boy\n\n'
+         '**จีฮู และดูซอ ถูกฆาตกรต่อเนื่อง คิมชิน พรากครอบครัวของทั้งสองคนไป** ดูซอได้ฝึกให้จีฮูกลายเป็นอาวุธสังหารเพื่อรอวันแก้แค้นให้กับครอบครัว\n\n'
+         'จีฮูจึงต้องเข้าเรือนจำเพื่อล้างแค้นฆาตกรด้วยน้ำมือของตนเอง **“ประเทศนี้ยกเลิกโทษประหารไปแล้ว ถ้าอย่างนั้นก็ควรมีใครสักคนจัดการเองไม่ใช่หรอ?”**',
+         'web':'Webtoon', 'link': 'https://www.webtoons.com/th/thriller/death-row-boy/list?title_no=4749'},
     ]
-    for item in rc_ac_fs:
+    for item in tr_ac_dm:
         st.image(item['image'], caption=item['caption'], width=200)
         st.markdown(item['markdown'])
         st.link_button(item['web'],item['link'])
@@ -589,6 +773,22 @@ if ('Idol' in choices or 'Drama' in choices or 'Time Travel' in choices) and all
 
     ]
     for item in id_dm_tt:
+        st.image(item['image'], caption=item['caption'], width=200)
+        st.markdown(item['markdown'])
+        st.link_button(item['web'],item['link'])
+
+# Idol Drama Fantasy
+if ('Idol' in choices or 'Drama' in choices or 'Fantasy' in choices) and all(choice in ['Idol', 'Drama', 'Fantasy'] for choice in choices):
+    id_dm_fs = [
+        {'image': 'manhwa_png/id_dm_fs00.jpg',
+         'caption': 'ห้องสมุดพรสวรรค์ของท็อปสตาร์',
+         'markdown': 'ชื่ออังกฤษ : Top Star’s Talent Library\n\n'
+         '**นาซังจุน เด็กฝึกผู้พยายามอย่างหนักหน่วงแต่ไร้พรสวรรค์ในการเป็นไอดอล**\n\n'
+         'วันหนึ่งนาซังจุนกำลังจะล้มเลิกความฝัน เขาก็ได้รับหนังสือ **กฎหนึ่งหมื่นชั่วโมง** และพบกับห้องสมุดพรสวรรค์ ที่สามารถมยืมพรมาเติมเต็มในสิ่งที่เขาขาดหายไปได้',
+         'web':'KaKao Webtoon', 'link': 'https://th.kakaowebtoon.com/content/ห้องสมุดพรสวรรค์ของท็อปสตาร์/524?tab=episode'},
+
+    ]
+    for item in id_dm_fs:
         st.image(item['image'], caption=item['caption'], width=200)
         st.markdown(item['markdown'])
         st.link_button(item['web'],item['link'])
