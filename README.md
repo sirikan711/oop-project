@@ -6,6 +6,7 @@
 - name : ศิริกานต์ อ้อมแก้ว
 
 ## technology : streamlit
-## application description :
+## website description :
+เว็บไซต์ที่ช่วยค้นหามันฮวา(manhwa) เพียงเลือกประเภทของมันฮวาที่คุณสนใจ โดยสามารถเลือกได้หลายตัวเลือกเพื่อเจาะจงมันฮวาที่คุณต้องการ และยังมีช่องทางในการอ่านมันฮวาที่ถูกลิขสิทธิ์อีกด้วย
 ## presentation : [slide/canva/etc.] link [public/ubu]
 ## video : link [public/ubu]
