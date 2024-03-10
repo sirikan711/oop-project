@@ -1,5 +1,5 @@
 # website title : FIND Blaze.wa
-![Alt text](findblaze_wa.png)
+![Alt text](findblaze_wa1.png)
 
 ## author :
 - id : 66114540711
