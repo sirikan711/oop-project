@@ -9,6 +9,6 @@
 ## website description :
 เว็บไซต์ที่ช่วยค้นหามันฮวา(manhwa) เพียงเลือกประเภทของมันฮวาที่คุณสนใจ โดยสามารถเลือกได้หลายตัวเลือกเพื่อเจาะจงมันฮวาที่คุณต้องการ พร้อมช่องทางในการอ่านแบบถูกลิขสิทธิ์
 ![Alt text](findblaze_wa_choose.png)
-
+![Alt text](findblaze_wa_ex.png)
 ## presentation : [slide/canva/etc.] link [public/ubu]
 ## video : link [public/ubu]
