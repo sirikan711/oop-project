@@ -1,4 +1,4 @@
-# application title : FIND Blaze.wa
+# website title : FIND Blaze.wa
 ![Alt text](findblaze_wa.png)
 
 ## author :
