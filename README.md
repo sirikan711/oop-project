@@ -11,5 +11,5 @@
 ![Alt text](findblaze_wa_choose1.png)
 
 ![Alt text](findblaze_wa_ex1.png)
-## presentation : [FIND Blaze.wa](https://www.canva.com/design/DAF_FWPbbJ4/iqZ-avKm5IlTgelF9_jRJw/view?utm_content=DAF_FWPbbJ4&utm_campaign=designshare&utm_medium=link&utm_source=editor)
+## presentation : [FIND Blaze.wa](https://www.canva.com/design/DAF_FWPbbJ4/8bNuuuzvm-dtu77_2D2OKQ/edit?utm_content=DAF_FWPbbJ4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 ## video : [present website](https://www.canva.com/design/DAF_FWPbbJ4/iqZ-avKm5IlTgelF9_jRJw/view?utm_content=DAF_FWPbbJ4&utm_campaign=designshare&utm_medium=link&utm_source=recording_view)
